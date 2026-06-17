@@ -5,6 +5,17 @@ import jakarta.persistence.*;
 @Entity
 @Table(name = "products")
 public class Product {
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "CategoryID", insertable  = false, updatable = false)
+    private Category category;
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
