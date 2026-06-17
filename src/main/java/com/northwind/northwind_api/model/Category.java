@@ -12,14 +12,10 @@ public class Category {
     private Integer categoryID;
 
     @Column(name = "CategoryName")
-    private String name;
+    private String categoryName;
 
     @Column(name = "Description")
     private String description;
-
-//    @Lob
-//    @Column(name = "Picture")
-//    private byte[] picture;
 
     public Integer getCategoryID() {
         return categoryID;
@@ -29,12 +25,12 @@ public class Category {
         this.categoryID = categoryID;
     }
 
-    public String getName() {
-        return name;
+    public String getCategoryName() {
+        return categoryName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
     }
 
     public String getDescription() {
@@ -44,12 +40,4 @@ public class Category {
     public void setDescription(String description) {
         this.description = description;
     }
-
-//    public byte[] getPicture() {
-//        return picture;
-//    }
-//
-//    public void setPicture(byte[] picture) {
-//        this.picture = picture;
-//    }
 }
